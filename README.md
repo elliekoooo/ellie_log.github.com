@@ -1,2 +1,2 @@
-# ellie_log.github.com
+# ellie-log.github.com
 dev log
