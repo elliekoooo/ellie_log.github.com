@@ -1,12 +1,9 @@
 import { useStaticQuery, graphql, Link } from "gatsby";
-import React, { useState } from "react";
+import React from "react";
+import TagBox from "./TagBox";
 
-const SideBar = ({id, getId}: any) => {
-    let setId = (id: any) => {
-        return getId(id);
-    };
-    
-     const data = useStaticQuery(graphql`
+const SideBar = () => {
+    const data = useStaticQuery(graphql`
         query {
             allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
                 edges {
@@ -15,10 +12,10 @@ const SideBar = ({id, getId}: any) => {
                             title
                             date(formatString: "MMMM DD, YYYY")
                             slug
+                            tag
                         }
                     id
                     excerpt(format: MARKDOWN)
-                    rawMarkdownBody
                 }
             }
         }
@@ -26,12 +23,16 @@ const SideBar = ({id, getId}: any) => {
 
     return (
         <div className="mx-6 my-6 py-3">
-            { data.allMarkdownRemark.edges.map(({ node }:any) => (
-                <div className="my-3" key={node.id} onClick={() => setId(node)}>
-                    <div className="font-light text-sm my-1">{node.frontmatter.title}</div>
-                    <div className="font-thin text-xs">{node.frontmatter.date}</div>
-                </div>
-            ))}
+                {data.allMarkdownRemark.edges.map(({ node }: any) => (
+                    <div key={node.id}>
+                        <div>
+                            <TagBox tag={node.frontmatter.tag}></TagBox>
+                        </div>
+                        <div className="my-3">
+                            <div className="font-light text-sm my-1"><Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link></div>
+                        </div>
+                    </div>    
+                ))}
         </div>
     )
 };

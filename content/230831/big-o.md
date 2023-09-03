@@ -1,12 +1,14 @@
 ---
 title: "Big O"
 date: "2023-08-30"
-slug: "/big-o"
+slug: "/230831/big-o"
+tag: ["tag2", "tag1"]
 ---
+
+# Big O
 
 _Reference; Cracking The Coding Interview_
 
-#### Big O
 
 ##### Time Complexity
 * What the concept of asymptotic runtime, Big O time.
