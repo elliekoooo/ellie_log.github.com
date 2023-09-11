@@ -2,11 +2,11 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 const path = require(`path`)
 
 // Log out information after a build is done
-exports.onPostBuild = ({ reporter }) => {
+exports.onPostBuild = ({ reporter }: any) => {
   reporter.info("Your Gatsby site has been built!");
 }
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, getNode, actions }: any) => {
     const { createNodeField } = actions;
     if (node.internal.type === `MarkdownRemark`) {
         const slug = createFilePath({ node, getNode });
@@ -18,8 +18,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     }
 }
 
+// Create tagList
+
+
 // Create blog pages dynamically
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }: any) => {
   const { createPage } = actions
   const Layout = path.resolve("src/pages/index.tsx");
 
@@ -31,18 +34,21 @@ exports.createPages = async ({ graphql, actions }) => {
           fields {
             slug
           }
+          frontmatter {
+            category
+          }
         }
       }
-    }
-  `);
+    }`);
 
-  result.data.allMarkdownRemark.nodes.forEach(post => {
+  result.data.allMarkdownRemark.nodes.forEach((post:any) => {
     createPage({
       path: post.fields?.slug,
       component: Layout,
       context: {
         id: post.id,
-        slug: post.fields?.slug
+        slug: post?.fields?.slug,
+        category: post?.frontmatter?.category
       },
     })
   })

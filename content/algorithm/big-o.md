@@ -1,8 +1,8 @@
 ---
 title: "Big O"
 date: "2023-08-30"
-slug: "/230831/big-o"
-tag: ["tag2", "tag1"]
+slug: "/algorithm/big-o"
+category: "algorithm"
 ---
 
 # Big O

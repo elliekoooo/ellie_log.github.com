@@ -48,7 +48,7 @@ const config: GatsbyConfig = {
       },
       __key: "content"
     },
-    { resolve: 'gatsby-transformer-remark' }
+    { resolve: 'gatsby-transformer-remark' },
   ]
 };
 

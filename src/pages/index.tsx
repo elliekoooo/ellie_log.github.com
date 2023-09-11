@@ -3,19 +3,23 @@ import { graphql, type PageProps } from "gatsby"
 import Layout from "../layout"
 
 
-const IndexPage = ({data, location }:PageProps) => {
-
+const IndexPage = ({pageContext, data, location }:PageProps) => {
   const { markdownRemark }:any = data;
   return (
-      <Layout props={markdownRemark}></Layout>
+    <Layout props={markdownRemark}></Layout>
   )
 } 
 
 export const pageQuery = graphql`
   query($id: String) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(
+      id: { eq: $id }   
+    ) {
       id
       rawMarkdownBody
+      frontmatter {
+        category
+      }
     }
 }`;
 

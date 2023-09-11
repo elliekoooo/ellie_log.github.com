@@ -27,6 +27,18 @@
     overflow-y: auto;
 }
 
+.profile {
+    background-image: url(../images/icon.png);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
 /* h1 {
     font-weight: bold;
     font-size: 5rem;
