@@ -44,6 +44,7 @@ const SideBar = (selected:any) => {
         <div className="my-3">
             <div className="mx-5">
                 <Profile></Profile>
+                <div className="mx-3 px-3 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">CATEGORY</div>
                 <Category categories={categories} selectCategory={selectCategory} ></Category>
                 <div className="mx-3 px-3 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">POSTS</div>
                 {list?.map(({ node }: any) => (

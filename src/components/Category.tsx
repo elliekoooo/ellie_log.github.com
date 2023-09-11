@@ -13,7 +13,6 @@ const Category:React.FC<{categories:category[], selectCategory:any}> = ({categor
 
     return (
         <div className="max-w-xs">
-            <div className="mx-3 px-3 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">CATEGORY</div>
             <div className="split-side max-h-32 p-4 justify-start items-start py-2 cursor-pointer">
                 {categories.map((c:category) => (
                     <div key={c?.fieldValue} 
