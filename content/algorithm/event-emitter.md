@@ -16,7 +16,7 @@ _Reference; Leet code_
 
 결과적으로 이러한 형태가 된다.
 
-```script
+```typescript
 
 events = [
 	eventName1: [callback1, callback2...]
@@ -34,7 +34,7 @@ emit은 events 배열에 저장된 함수들을 실행시켜주면 된다.
 
 ### Code
 
-```script
+```typescript
 
 type Callback = (...args: any[]) => any;
 type Subscription = {
