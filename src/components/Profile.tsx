@@ -1,9 +1,18 @@
 import React from "react";
+import { StaticImage} from "gatsby-plugin-image";
 
 const Profile = () => {
     return (
-        <div className="px-3 mx-3 my-6 py-6">
-            <img src="https://picsum.photos/300/200" className="object-cover rounded-full"></img>
+        <div className="my-6 mx-6 pl-2">
+            <StaticImage
+                className="bio-avatar object-cover mb-3"
+                formats={["auto", "webp", "avif"]}
+                src="../images/profile.jpeg"
+                alt="Profile picture"
+            />
+            <div className="m-1">
+                This is a personal blog where I organize and share knowledge 😚 
+            </div>
         </div>
     )
 };

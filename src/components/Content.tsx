@@ -9,7 +9,7 @@ const Content = (props:any) => {
     return (
         /* dark:prose-invert */
         <div className="mx-6 py-6 my-6 prose">  
-            <span className="mr-3 bg-purple-500 text-white px-2 py-1 text-sm rounded cursor-pointer">{category}</span>
+            <span className="mr-3 bg-purple-500 text-white px-2 py-1 text-sm rounded">{category}</span>
             <ReactMarkdown 
                 remarkPlugins={[remarkGfm]} 
                 components={{
