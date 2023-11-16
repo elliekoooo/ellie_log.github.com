@@ -1,21 +1,9 @@
-import { Link } from "gatsby";
-import React, { useEffect, useState } from "react";
+import React, {  } from "react";
 
-const Toc = (props: any) => {   
-    console.log(props);
+const Toc = (toc: any) => {   
     return (
-        <div>
-            {props.headers.map((props:any) => {
-                return(
-                    <div>
-                        <Link key={props.id} className="text-xs font-light" to={"#"+props.id}>
-                            {props.header}
-                        </Link>
-                    </div>
-                )
-            })}         
-        </div>
-    )    
+        <div dangerouslySetInnerHTML={{__html: toc?.props}}></div>
+    );
 };
 
 export default Toc;

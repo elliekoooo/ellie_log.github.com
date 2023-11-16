@@ -20,6 +20,8 @@ export const pageQuery = graphql`
       frontmatter {
         category
       }
+      tableOfContents
+      html
     }
 }`;
 
