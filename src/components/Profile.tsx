@@ -10,9 +10,6 @@ const Profile = () => {
                 src="../images/profile.jpeg"
                 alt="Profile picture"
             />
-            <div className="m-1">
-                This is a personal blog where I organize and share knowledge 😚 
-            </div>
         </div>
     )
 };

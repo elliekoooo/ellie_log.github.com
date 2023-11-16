@@ -26,12 +26,7 @@ category: "data-structures"
 2. **_How to use?_**
    
 
-### Cpu, Ram, Storage
-
-
-
 **define the way you interact with this data and how it is arranged in ram**
-
 
 | Data Structures 	| Algorithm 	|
 |---	|---	|
@@ -44,3 +39,11 @@ category: "data-structures"
 | Graphs 	|  	|
 | Hash Table 	|  	|
 
+1. Insertion
+2. Deletion
+3. Traversal
+4. Sorting
+5. Searching
+6. Acess
+   
+   

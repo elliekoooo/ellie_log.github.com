@@ -18,9 +18,6 @@ exports.onCreateNode = ({ node, getNode, actions }: any) => {
     }
 }
 
-// Create tagList
-
-
 // Create blog pages dynamically
 exports.createPages = async ({ graphql, actions }: any) => {
   const { createPage } = actions

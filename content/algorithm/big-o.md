@@ -10,7 +10,7 @@ category: "algorithm"
 _Reference; Cracking The Coding Interview_
 
 
-##### Time Complexity
+### Time Complexity
 * What the concept of asymptotic runtime, Big O time.
 	
     * Electronic Transfer: The size of file is going up, The time to transfer file is going up. O(s).
@@ -26,7 +26,7 @@ _Reference; Cracking The Coding Interview_
 > worst case: when if the pivot is repeatedly the biggest element in the array? => Our recursion doesn't devide the array in half, and recurse on each half <O(N^2)>
 > expected case: Sometimes the pivot will be very low or very high, but it won't always happen. <O(NlogN)>
 
-##### Space complexity
+### Space complexity
 
 * the amount of memory or space required by algorithm.
 	
@@ -100,5 +100,7 @@ int pairSum(int a, int b){
     
 * Recursive Runtimes 
 
+### test title
 
-    
+title
+test

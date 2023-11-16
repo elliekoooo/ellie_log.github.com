@@ -5,7 +5,6 @@ type category = {
     totalCount: number
 }
 
-
 const Category:React.FC<{categories:category[], selectCategory:any}> = ({categories, selectCategory}) => {
     const onclick = (category:string) => {
         selectCategory(category);

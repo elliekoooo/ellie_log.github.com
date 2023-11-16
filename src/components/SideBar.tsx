@@ -18,7 +18,6 @@ const SideBar = (selected:any) => {
                             category
                         }
                         id
-                        excerpt(format: MARKDOWN)
                     }
                 }
             }
@@ -29,10 +28,14 @@ const SideBar = (selected:any) => {
                 }
             }
         }`);
-
+        
     const [category, setCategory] = useState("");    
     const selectCategory = (category: string) => {
         setCategory(category);
+    };
+    const [toggle, setToggle] = useState(false);
+    const isToggle = (isToggle:boolean) => {
+        setToggle(isToggle);
     };
 
     const categories = data.category.group;
@@ -41,8 +44,8 @@ const SideBar = (selected:any) => {
 
     const isSelected = true;
     return (
-        <div className="my-3">
-            <div className="mx-5">
+        <div className="my-3 mx-2 lg:fixed">
+            <div className="hidden lg:block">
                 <Profile></Profile>
                 <div className="mx-3 px-3 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">CATEGORY</div>
                 <Category categories={categories} selectCategory={selectCategory} ></Category>
@@ -57,9 +60,33 @@ const SideBar = (selected:any) => {
                     </div>
                 ))}
             </div>
+            <div className="lg:hidden flex mx-3">
+                <div onClick={()=>isToggle(!toggle)}>
+                    <svg className="w-5 h-5 cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </div>
+                {/* <div className={toggle ? "text-xs mx-2" : "hidden"}>
+                    <Category categories={categories} selectCategory={selectCategory} ></Category>
+                    <div className="mx-2 divide-y divide-dashed">
+                        {list?.map(({ node }: any) => (
+                            <div key={node.id} className="py-2 mx-3"> 
+                                <Link to={node.frontmatter.slug}>
+                                    <div className="font-semibold text-xs px-2">{node.frontmatter.title}</div>
+                                    <div className={toggle ? "hidden" : ""}>
+                                        <div className="pl-1 italic text-xs text-gray-300">{node.frontmatter.category}</div>
+                                        <div className="pl-3 italic text-xs text-gray-300">{node.frontmatter.date}</div>
+                                    </div>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div> */}
+            </div>
         </div>
     )    
 };
+
 
 export default SideBar;
 
