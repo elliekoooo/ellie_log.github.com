@@ -16,9 +16,6 @@ const Layout:React.FC<{props:any}> = (data: any) => {
                 <div className="lg:col-span-6 sm:col-span-3 overflow-y-auto">
                     <Content markdown={content}></Content>
                 </div>
-                {/* <div className="lg:col-span-1 sm:col-span-1 min-w-auto overflow-y-auto"> */}
-                    {/* <Navigation rawMarkdownBody={content.rawMarkdownBody}></Navigation> */}
-                {/* </div> */}
             </div>
         </div>
     );
