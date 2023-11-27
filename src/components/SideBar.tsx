@@ -49,7 +49,7 @@ const SideBar = (selected:any) => {
                 <Profile></Profile>
                 <div className="mx-3 px-3 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">CATEGORY</div>
                 <Category categories={categories} selectCategory={selectCategory} ></Category>
-                <div className="mx-3 px-3 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">POSTS</div>
+                <div className="mx-3 px-3 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">LIST</div>
                 {list?.map(({ node }: any) => (
                     <div key={node.id} className={`${selected?.props?.id == node.id ? "text-purple-400 hover:text-rose-300 pl-2 mx-3 my-3 rounded" : "hover:text-rose-300 pl-2 mx-3 my-3"}`}> 
                         <Link to={node.frontmatter.slug}>
@@ -60,28 +60,27 @@ const SideBar = (selected:any) => {
                     </div>
                 ))}
             </div>
-            <div className="lg:hidden flex mx-3">
+            <div className="lg:hidden flex mx-3 font-mono">
                 <div onClick={()=>isToggle(!toggle)}>
-                    <svg className="w-5 h-5 cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
-                    </svg>
-                </div>
-                {/* <div className={toggle ? "text-xs mx-2" : "hidden"}>
-                    <Category categories={categories} selectCategory={selectCategory} ></Category>
-                    <div className="mx-2 divide-y divide-dashed">
+                    <div className="flex">
+                        <svg className="w-5 h-5 cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                        <div className="mx-3">Blog</div>
+                    </div>
+                    <div className={toggle ? "text-xs pt-2" : "hidden"}>
+                        <div className="mt-3 text-xs font-semibold">CATEGORY</div>
+                        <Category categories={categories} selectCategory={selectCategory} ></Category>
+                        <div className="mt-3 text-xs font-semibold">LIST</div>
                         {list?.map(({ node }: any) => (
-                            <div key={node.id} className="py-2 mx-3"> 
+                            <div key={node.id} className="pt-2 mx-5"> 
                                 <Link to={node.frontmatter.slug}>
-                                    <div className="font-semibold text-xs px-2">{node.frontmatter.title}</div>
-                                    <div className={toggle ? "hidden" : ""}>
-                                        <div className="pl-1 italic text-xs text-gray-300">{node.frontmatter.category}</div>
-                                        <div className="pl-3 italic text-xs text-gray-300">{node.frontmatter.date}</div>
-                                    </div>
+                                    <div className="text-xs px-2">{node.frontmatter.title}</div>
                                 </Link>
                             </div>
                         ))}
-                    </div>
-                </div> */}
+                    </div> 
+                </div>
             </div>
         </div>
     )    

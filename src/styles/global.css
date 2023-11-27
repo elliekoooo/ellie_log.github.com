@@ -43,6 +43,23 @@ html {
     bottom: 0;
 }
 
+#toc {
+    border-left: 0.4rem solid grey;
+}
+
+#toc a:hover {
+    background-color: aquamarine;
+}
+
+#toc li > p > a {
+    margin-left: 0.5rem;
+    font-size: larger;
+}
+
+#toc li > a {
+    margin-left: 1.2rem;
+}
+
 /* h1 {
     font-weight: bold;
     font-size: 5rem;

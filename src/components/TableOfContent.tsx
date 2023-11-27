@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Toc = (toc: any) => {   
     let options = document.querySelectorAll('h3');
     options.forEach((o:Element)=>{
@@ -8,7 +7,7 @@ const Toc = (toc: any) => {
     });
 
     return (
-        <div className="lg:fixed lg:block hidden text-xs text-slate-500" dangerouslySetInnerHTML={{__html: toc?.props}}></div>
+            <div id="toc" className="lg:fixed lg:block hidden text-xs" dangerouslySetInnerHTML={{__html: toc?.props}}></div>
         );
     };
     
