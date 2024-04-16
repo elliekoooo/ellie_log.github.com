@@ -2,7 +2,7 @@
 title: "Data Structures"
 date: "2023-09-13"
 slug: "/data-structures/basic"
-category: "data-structures"
+category: "data structure"
 ---
 
 # Data Structures

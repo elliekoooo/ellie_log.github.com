@@ -11,18 +11,19 @@ const Category:React.FC<{categories:category[], selectCategory:any}> = ({categor
     };
 
     return (
-        <div className="max-w-xs">
-            <div className="split-side max-h-32 p-4 justify-start items-start py-2 cursor-pointer">
-                {categories.map((c:category) => (
-                    <div key={c?.fieldValue} 
-                          onClick={() => onclick(c.fieldValue)}
-                          className="text-sm px-3 pb-1">
-                            {c.fieldValue}
-                            <span className="text-gray-300 text-xs mx-1">({c.totalCount})</span>
-                    </div>
-                ))}   
-            </div>  
-        </div> 
+            <div className="hidden lg:block mx-5 overflow-auto">
+                <div className="flex flex-wrap my-2 cursor-pointer mx-2">
+                    {categories.map((c:category) => (
+                        <div key={c?.fieldValue} 
+                            onClick={() => onclick(c.fieldValue)} 
+                            className="px-2 py-1 my-1 mx-1 text-xs bg-gray-200 rounded-full shadow-sm">
+                                {/* 공백 있을시 개행되서 정규식으로 대체해줌  */}
+                                { c?.fieldValue.replaceAll(" ", "\u00a0") }
+                                <span className="text-gray-300 text-xs">({c.totalCount})</span>
+                        </div>
+                    ))}   
+                </div>  
+            </div> 
     )
 };
 

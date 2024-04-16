@@ -18,10 +18,11 @@ exports.onCreateNode = ({ node, getNode, actions }: any) => {
     }
 }
 
+const Layout = path.resolve("src/pages/index.tsx");
+
 // Create blog pages dynamically
 exports.createPages = async ({ graphql, actions }: any) => {
   const { createPage } = actions
-  const Layout = path.resolve("src/pages/index.tsx");
 
   const result = await graphql(`
     {
@@ -38,16 +39,17 @@ exports.createPages = async ({ graphql, actions }: any) => {
       }
     }`);
 
-  result.data.allMarkdownRemark.nodes.forEach((post:any) => {
-    createPage({
-      path: post.fields?.slug,
-      component: Layout,
-      context: {
-        id: post.id,
-        slug: post?.fields?.slug,
-        category: post?.frontmatter?.category
-      },
-    })
+    
+    result.data.allMarkdownRemark.nodes.forEach((post:any) => {
+      createPage({
+        path: post.fields?.slug,
+        component: Layout,
+        context: {
+          id: post.id,
+          slug: post?.fields?.slug,
+          category: post?.frontmatter?.category
+        },
+      })
   })
 }
 

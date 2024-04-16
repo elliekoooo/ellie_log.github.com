@@ -2,7 +2,7 @@
 title: "Array"
 date: "2023-09-14"
 slug: "/data-structures/array"
-category: "data-structures"
+category: "data structure"
 ---
 
 # Array

@@ -44,11 +44,11 @@ const SideBar = (selected:any) => {
 
     const isSelected = true;
     return (
-        <div className="my-3 mx-2 lg:fixed">
+        <div className="my-3 mx-2">
             <div className="hidden lg:block">
                 <Profile></Profile>
                 <div className="mx-3 px-3 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">CATEGORY</div>
-                <Category categories={categories} selectCategory={selectCategory} ></Category>
+                <Category categories={categories} selectCategory={selectCategory}></Category>
                 <div className="mx-3 px-3 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">LIST</div>
                 {list?.map(({ node }: any) => (
                     <div key={node.id} className={`${selected?.props?.id == node.id ? "text-purple-400 hover:text-rose-300 pl-2 mx-3 my-3 rounded" : "hover:text-rose-300 pl-2 mx-3 my-3"}`}> 
@@ -60,8 +60,10 @@ const SideBar = (selected:any) => {
                     </div>
                 ))}
             </div>
-            <div className="lg:hidden flex mx-3 font-mono">
-                <div onClick={()=>isToggle(!toggle)}>
+            <div className="lg:hidden flex">
+                <Category categories={categories} selectCategory={selectCategory} ></Category>
+
+                {/* <div onClick={()=>isToggle(!toggle)}>
                     <div className="flex">
                         <svg className="w-5 h-5 cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -80,7 +82,8 @@ const SideBar = (selected:any) => {
                             </div>
                         ))}
                     </div> 
-                </div>
+                </div> */}
+
             </div>
         </div>
     )    

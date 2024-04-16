@@ -6,7 +6,7 @@ import Layout from "../layout"
 const IndexPage = ({pageContext, data, location }:PageProps) => {
   const { markdownRemark }:any = data;
   return (
-    <Layout props={markdownRemark}></Layout>
+    <Layout props={markdownRemark} location={location}></Layout>
   )
 } 
 
