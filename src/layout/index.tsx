@@ -14,10 +14,10 @@ const Layout:React.FC<{props:any, location:any}> = (data: any) => {
         <div className="container">
             <Header></Header>
             <div className="grid lg:grid-cols-12 sm:grid-cols-4 gap-4">
-                <div className="lg:col-span-4 sm:col-span-9 min-w-auto">
+                <div className="lg:col-span-4 sm:col-span-9">
                     <SideBar props={content}></SideBar>
                 </div>
-                <div className="lg:col-span-8 sm:col-span-9 overflow-y-auto">
+                <div className="lg:col-span-8 sm:col-span-9 overflow-y-12">
                     <Content location={location} markdown={content}></Content>
                 </div>
             </div>

@@ -11,7 +11,7 @@ const Category:React.FC<{categories:category[], selectCategory:any}> = ({categor
     };
 
     return (
-            <div className="hidden lg:block mx-5 overflow-auto">
+            <div className="lg:block mx-5 overflow-auto">
                 <div className="flex flex-wrap my-2 cursor-pointer mx-2">
                     {categories.map((c:category) => (
                         <div key={c?.fieldValue} 
