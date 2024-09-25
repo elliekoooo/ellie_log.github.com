@@ -19,9 +19,9 @@ export const ScrollSection:React.FC<sections> = ({
     }, []);    
 
     const handleScroll = () => {
-        setTimeout(() => {
-           refs?.current[Math.ceil(window.scrollY/pageHeight)].scrollIntoView({behavior: 'smooth'});
-        }, 500);
+        // setTimeout(() => {
+        //    refs?.current[Math.ceil(window.scrollY/pageHeight)].scrollIntoView({behavior: 'smooth'});
+        // }, 500);
     }; 
 
     return (

@@ -10,14 +10,11 @@ body {
   height: 100vh;
 }
 
-.bg1 {
+.box {
+  min-height: 100px;
+}
+
+.tag:hover {
   background-color: lightgreen;
-}
-
-.bg2 {
-  background-color: lightblue;
-}
-
-.bg3 {
-  background-color: lightpink;
+  
 }
