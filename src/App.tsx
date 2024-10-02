@@ -25,25 +25,18 @@ function App() {
         <div className='header my-5'>
           <Header></Header>
         </div>
-        <div className='columns'>
-          <div className='column is-11'>
-            <ScrollSection refs={sectionRefs}>
-                {
-                    page.map((p,index) => (
-                        <section
-                            key={index} 
-                            className={"section"} 
-                            ref={(el:HTMLElement) => sectionRefs.current[index] = el}>
-                              { p(lang) }
-                        </section>
-                    ))
-                }
-            </ScrollSection>
-          </div>
-          {/* <div className='column is-1'>
-                <Navigator></Navigator>
-          </div> */}
-        </div>
+        <ScrollSection refs={sectionRefs}>
+            {
+                page.map((p,index) => (
+                    <section
+                        key={index} 
+                        className={"section"} 
+                        ref={(el:HTMLElement) => sectionRefs.current[index] = el}>
+                          { p(lang) }
+                    </section>
+                ))
+            }
+        </ScrollSection>
       </div>
   );
 }

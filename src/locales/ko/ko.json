@@ -3,6 +3,9 @@
         "dec": "한국 설명이지요"
     },
     "projects": {
-        "age-calculator":"간단한 만 나이 계산 앱."
+        "age-calculator":"1 간단한 만 나이 계산 앱.",
+        "age-calculator2":"2 간단한 만 나이 계산 앱.",
+        "age-calculator3":"3 간단한 만 나이 계산 앱.",
+        "age-calculator4":"4 간단한 만 나이 계산 앱."
     }
 }
