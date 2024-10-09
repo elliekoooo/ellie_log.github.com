@@ -15,7 +15,7 @@ const About = (lang: any) => {
                             { t('about.dec') }
                         </div>
                     </div>
-                    <div className="column">
+                    <div className="column mx-5">
                         <p className="subtitle mx-5 is-uppercase">My Skills</p>
                         <div className="box">
                             <div className="tags are-info"> 

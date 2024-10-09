@@ -1,10 +1,23 @@
 import { useTranslation } from "react-i18next";
 import { ImageSlider } from "component/Slider";
+import { useEffect, useState } from "react";
 
 const Projects:React.FC = (lang: any) => {
     const { t } = useTranslation(lang);
+    const [projects, setProjects] = useState({});
 
-    const projects:object = t('projects',  {returnObjects: true});
+    const fetchData = async() => {
+        const res = await Promise.resolve(t('projects',  {returnObjects: true}));
+
+        if(typeof res == "string")
+            return;
+        else 
+            setProjects(res);
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, [t]);
 
     return (
         <div className="hero">

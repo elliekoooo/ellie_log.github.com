@@ -12,7 +12,7 @@ export const ImageSlider:React.FC<imageInfo> = (
 ) => {
     const _srcs = srcs as [];
     const [left, setLeft] = useState(0);
-    const [right, setRight] = useState(2);
+    const [right, setRight] = useState(size); //모바일일땐 하나
 
     const goLeft = () => {
         setLeft(l=> l-1);
@@ -47,6 +47,10 @@ export const ImageSlider:React.FC<imageInfo> = (
                                         </div>
                                     </div>
                                 </div>
+                                <footer className="card-footer is-size-7">
+                                    <a href="#" className="card-footer-item">Github</a>
+                                    <a href="#" className="card-footer-item">Demo</a>
+                                </footer>
                             </div>
                         </div>
                     )))

@@ -14,33 +14,40 @@ import { Navigator } from 'component/Navigator';
 import { useSelector } from 'react-redux';
 import './locales/config';
 
+export const page = [About, Projects, Contact];
 
 function App() {
-  const page = [About, Projects, Contact];
   const sectionRefs = useRef<HTMLElement[]>([]);
   const lang = useSelector((state:any)=>state.myReducer);
 
   return (
-      <div className=''>
-        <div className='header my-5'>
+    <div>
+      <nav className='navbar is-fixed-top is-pulled-right'>
+        <div className='navbar-end'>
           <Header></Header>
         </div>
-        <ScrollSection refs={sectionRefs}>
-            {
-                page.map((p,index) => (
-                    <section
-                        key={index} 
-                        className={"section"} 
-                        ref={(el:HTMLElement) => sectionRefs.current[index] = el}>
-                          { p(lang) }
-                    </section>
-                ))
-            }
-        </ScrollSection>
+      </nav>
+      <div className="columns">
+        <div className="column is-11">
+          <ScrollSection refs={sectionRefs}>
+              {
+                  page.map((p,index) => (
+                      <section
+                          key={index} 
+                          className={"section"} 
+                          ref={(el:HTMLElement) => sectionRefs.current[index] = el}>
+                            { p(lang) }
+                      </section>
+                  ))
+              }
+          </ScrollSection>
+        </div>
+        <div className='column full-height is-flex is-justify-content-center is-align-items-center is-1'>
+           <Navigator></Navigator>
+        </div>
       </div>
+    </div>
   );
 }
 
 export default App;
-
-

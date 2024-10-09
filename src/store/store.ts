@@ -1,11 +1,12 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import { changeLanguage } from "i18next";
 
-export const lang:string[] = ["ko", "en"];
+const lang:string[] = ["ko", "en"];
+export const defaultLang = lang[0];
 
 const myReducer = createSlice({
     name: "langChange",
-    initialState: lang[1],
+    initialState: defaultLang,
     reducers: {
         change: (_state:string, action) => {
             changeLanguage(lang[+action.payload]);

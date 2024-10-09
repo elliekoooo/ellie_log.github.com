@@ -1,20 +1,42 @@
 body {
   -ms-overflow-style: none;
+  background-color: white;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-.section {
-  height: 100vh;
-}
-
-.box {
-  min-height: 100px;
+section {
+  min-height: 100vh;
 }
 
 .tag:hover {
   background-color: lightgreen;
   
+}
+
+.box {
+  min-height: 300px;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.card {
+  min-height: 150px;
+  min-width: 300px;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background-color: gray;
+}
+
+.full-height {
+  height: 100vh;
 }

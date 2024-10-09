@@ -12,10 +12,9 @@ const Header:any = () => {
     };
 
     return (
-        <div className="columns is-vcentered is-pulled-right mx-6">
+        <div className="columns is-vcentered">
             <div className="column">
-                <div className="field">
-                    {checked}
+                <div className="field"> 
                     <input 
                         id="switch" 
                         type="checkbox"
