@@ -1,10 +1,10 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, configureStore, createSlice } from "@reduxjs/toolkit";
 import { changeLanguage } from "i18next";
 
 const lang:string[] = ["ko", "en"];
 export const defaultLang = lang[0];
 
-const myReducer = createSlice({
+const langReducer = createSlice({
     name: "langChange",
     initialState: defaultLang,
     reducers: {
@@ -13,11 +13,26 @@ const myReducer = createSlice({
             return lang[+action.payload];
 }}});
 
+const pageReducer = createSlice({
+    name: "pageReducer",
+    initialState: 0,
+    reducers: {
+        get: (state:number) => {
+            return state;
+        },
+        set: (_state:number, action:PayloadAction<number>) => {
+            return action.payload;
+        }
+    }
+})
+
 const store = configureStore({ 
     reducer: {
-        myReducer: myReducer.reducer
-    } 
+        langReducer: langReducer.reducer,
+        pageReducer: pageReducer.reducer
+    }
 });
 
-export const { change } = myReducer.actions;
+export const { change } = langReducer.actions;
+export const { get, set } = pageReducer.actions;
 export default store;

@@ -1,4 +1,6 @@
 import { MutableRefObject, PropsWithChildren, useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { set } from 'store/store';
 
 const pageHeight = window.innerHeight;
 type sections = {
@@ -6,27 +8,24 @@ type sections = {
 }& PropsWithChildren;
 
 const throttle = (func:Function, delay: number) => {
-    let lastCall = 0;
+    let last = 0;
     return (...args: any) => {
       const now = new Date().getTime();
-      if (now - lastCall >= delay) {
-        lastCall = now;
+      if (now - last >= delay) {
+        last = now;
         func(args);
       }
     };
   };
 
-export const useGetPosition = () => {
-    const [position, setPosition] = useState(0); 
-    
-    return { position, setPosition };
-};
 
 export const ScrollSection:React.FC<sections> = ({
     refs,
     children
 }:sections) => {
-    const {position, setPosition} = useGetPosition();
+    const [position, setPosition] = useState(0); 
+    const dispatch = useDispatch();
+
 
     useEffect(()=> {
         window.addEventListener('wheel', throttle(()=>handleScroll(), 100), {passive: false});
@@ -39,6 +38,7 @@ export const ScrollSection:React.FC<sections> = ({
     }, []);  
 
     useEffect(()=> {
+        dispatch(set(position/pageHeight));
         window.scrollTo({
             top: position,
             behavior: 'smooth'
@@ -46,7 +46,7 @@ export const ScrollSection:React.FC<sections> = ({
     }, [position]);
 
     const handleScroll = () => {
-      setPosition((Math.round(window.scrollY/pageHeight)*pageHeight));
+        setPosition((Math.round(window.scrollY/pageHeight)*pageHeight));
     }; 
 
     return (

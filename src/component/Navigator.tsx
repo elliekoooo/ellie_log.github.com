@@ -1,15 +1,16 @@
 import { page } from "App";
+import { useSelector } from "react-redux";
 
 export const Navigator = () => {
 
-   const _page = page;
+   const pageIndex = useSelector((state:any)=>state.pageReducer);
 
    return (
     <div className="fixed">
         {
-            _page.map((p, index:number) => (
-                <p key={index} className="circle my-3"></p>
-            ))
+            page.map((_p, index:number) =>{
+                return (<p key={index} className={"circle my-3 "+(pageIndex==index ? 'color' : '')}></p>);
+            })
         }
     </div>
    ) 

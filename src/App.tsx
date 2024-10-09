@@ -18,7 +18,7 @@ export const page = [About, Projects, Contact];
 
 function App() {
   const sectionRefs = useRef<HTMLElement[]>([]);
-  const lang = useSelector((state:any)=>state.myReducer);
+  const lang = useSelector((state:any)=>state.langReducer);
 
   return (
     <div>
