@@ -1,7 +1,15 @@
+.background-picture {
+  background-image: url(./assets/images/bg.jpeg);
+  background-repeat:repeat-y;
+  background-size: contain;
+}
+
+.test-bg {
+  background-color: pink;
+}
+
 body {
   -ms-overflow-style: none;
-  background-color: white;
-  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -14,7 +22,6 @@ section {
 
 .tag:hover {
   background-color: lightgreen;
-  
 }
 
 .box {
@@ -38,9 +45,50 @@ section {
 }
 
 .color {
-  background-color: rgb(9, 92, 9);
+  background-color: rgb(86, 65, 86);
 }
 
 .full-height {
   height: 100vh;
 }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon:hover {
+  animation: bouncing 1s;
+}
+
+@keyframes bouncing {
+  0%, 100% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes spreading {
+  0%, 100% {
+    transform: translate3d(0);
+  }
+
+  50% {
+    transform: translate3d(10px, 10px, 0);
+  }
+}
+
+.overlay {
+  position: relative;
+  transform: translate(3px, 37px);
+}
+
+.move {
+  right: 5%;
+  top: 30px;
+}
+

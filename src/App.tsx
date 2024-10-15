@@ -13,20 +13,19 @@ import Header from 'layout/Header';
 import { Navigator } from 'component/Navigator';
 import { useSelector } from 'react-redux';
 import './locales/config';
+import Home from 'layout/Home';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBlogger, faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 
-export const page = [About, Projects, Contact];
+export const page = [Home, About, Projects, Contact];
 
 function App() {
   const sectionRefs = useRef<HTMLElement[]>([]);
   const lang = useSelector((state:any)=>state.langReducer);
 
   return (
-    <div>
-      <nav className='navbar is-fixed-top is-pulled-right'>
-        <div className='navbar-end'>
-          <Header></Header>
-        </div>
-      </nav>
+    <div className='background-picture has-navbar-fixed-top'>
+      <Header></Header>
       <div className="columns">
         <div className="column is-11">
           <ScrollSection refs={sectionRefs}>
@@ -42,8 +41,10 @@ function App() {
               }
           </ScrollSection>
         </div>
-        <div className='column full-height is-flex is-justify-content-center is-align-items-center is-1'>
-           <Navigator></Navigator>
+        <div className='column my-3 is-1'>
+          <div className='full-height center fixed'>
+            <Navigator></Navigator>
+          </div>
         </div>
       </div>
     </div>

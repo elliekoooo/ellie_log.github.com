@@ -5,11 +5,19 @@ export const Navigator = () => {
 
    const pageIndex = useSelector((state:any)=>state.pageReducer);
 
+   const changePage = () => {
+
+   };
+
    return (
-    <div className="fixed">
+    <div>
         {
             page.map((_p, index:number) =>{
-                return (<p key={index} className={"circle my-3 "+(pageIndex==index ? 'color' : '')}></p>);
+                return (<p 
+                            key={index} 
+                            className={"circle my-3 "+(pageIndex==index ? 'color' : '')}
+                            onClick={changePage}
+                        />);
             })
         }
     </div>

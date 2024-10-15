@@ -26,7 +26,6 @@ export const ScrollSection:React.FC<sections> = ({
     const [position, setPosition] = useState(0); 
     const dispatch = useDispatch();
 
-
     useEffect(()=> {
         window.addEventListener('wheel', throttle(()=>handleScroll(), 100), {passive: false});
         window.addEventListener('scroll', throttle(()=>handleScroll(), 100),{passive: false});
