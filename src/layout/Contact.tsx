@@ -1,6 +1,6 @@
 const Contact = (lang: any) => {
     return (
-        <div className="hero">
+        <div id="contact" className="hero">
             <div className="hero-body">
                 <p className="title is-uppercase">Contact</p>
                 <div className="columns">

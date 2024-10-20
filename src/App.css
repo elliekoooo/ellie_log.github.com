@@ -1,31 +1,36 @@
 .background-picture {
   background-image: url(./assets/images/bg.jpeg);
-  background-repeat:repeat-y;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }
 
-.test-bg {
-  background-color: pink;
+.navbar .navbar-menu, .navbar-brand, .box {
+  background-color: rgb(132, 130, 147) !important;
+  box-shadow: none;
+}
+
+.link:hover {
+  background-color: rgb(87, 74, 87);
+}
+
+.tag:hover {
+  background-color: rgb(87, 74, 87) !important;
+  color: white;
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: none;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 section {
   min-height: 100vh;
+  font-family: "lato", "Roboto", "Arial", sans-serif;
 }
 
 .tag:hover {
   background-color: lightgreen;
-}
-
-.box {
-  min-height: 300px;
 }
 
 .fixed {
@@ -59,7 +64,7 @@ section {
 }
 
 .icon:hover {
-  animation: bouncing 1s;
+  animation: bouncing 1s none;
 }
 
 @keyframes bouncing {
@@ -82,13 +87,6 @@ section {
   }
 }
 
-.overlay {
-  position: relative;
-  transform: translate(3px, 37px);
-}
 
-.move {
-  right: 5%;
-  top: 30px;
-}
+
 

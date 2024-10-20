@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { change } from '../store/store';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBlogger, faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
-import { faHome, faLaptop, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faLaptop, faLink, faLinkSlash, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Header:any = () => {
     const [checked,setChecked] = useState(false);
@@ -21,12 +21,11 @@ const Header:any = () => {
     };
 
     return (
-        <nav className="navbar is-danger is-fixed-top" role="navigation" aria-label="main navigation">
+        <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a className="" href=""></a>    
                 <a role="button" 
                     onClick={toggleNavBar} 
-                    className={`navbar-burger js-burger ${active ? 'is-active':''}`}
+                    className={`navbar-burger js-burger has-text-white ${active ? 'is-active':''}`}
                     aria-label="menu" 
                     aria-expanded="false" 
                     data-target="navExm">
@@ -38,25 +37,25 @@ const Header:any = () => {
                 </a>
             </div>
             <div id="navExm" className={`navbar-menu ${active ? 'is-active':''}`}>
-                <div className="navbar-start">
-                    <a className="navbar-item is-size-7">
-                        <FontAwesomeIcon className="icon" icon={faHome}></FontAwesomeIcon>
-                        <span className="mx-2 has-text-weight-bold">HOME</span>
+                <div className="navbar-end">
+                    <a className="navbar-item link has-text-white" href="#home">
+                        <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+                        <span className="has-text-weight-bold is-size-7">HOME</span>
                     </a>
-                    <hr className="navbar-divider"/>
-                    <a className="navbar-item is-size-7">
-                        <FontAwesomeIcon className="icon" icon={faUser}></FontAwesomeIcon>
-                        <span className="mx-2 has-text-weight-bold">ABOUT</span>
+                    <a className="navbar-item link has-text-white" href="#about">
+                        <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
+                        <span className="has-text-weight-bold is-size-7">ABOUT</span>
                     </a>
-                    <hr className="navbar-divider"/>
-                    <a className="navbar-item is-size-7">
-                        <FontAwesomeIcon className="icon" icon={faLaptop}></FontAwesomeIcon>
-                        <span className="mx-2 has-text-weight-bold">PROJECTS</span>
+                    <a className="navbar-item link has-text-white" href="#projects">
+                        <FontAwesomeIcon icon={faLaptop}></FontAwesomeIcon>
+                        <span className="has-text-weight-bold is-size-7">PROJECTS</span>
                     </a>
-                </div>
-                <div className="navbar-end mt-5">
+                    <a className="navbar-item link has-text-white" href="#contact">
+                        <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
+                        <span className="has-text-weight-bold is-size-7">CONTACTS</span>
+                    </a>
                     <div className="navbar-item">
-                        <div className="field is-grouped">
+                        <div className="field is-grouped px-1 pt-2">
                             <p className="control">
                                 <a className="has-text-grey-light icon mx-1" target="_blank" href={'https://github.com/elliekoooo'}>
                                     <FontAwesomeIcon className="is-size-3" icon={faSquareGithub}/>
@@ -69,6 +68,10 @@ const Header:any = () => {
                                 </a>
                             </p>
                         </div>
+                    </div>
+                    <div className="navbar-item">
+                        <input id="switch" type="checkbox" name="switch" className="switch is-info" checked={checked} onChange={()=>changeLang()}/>
+                        <label htmlFor="switch"/>
                     </div>
                 </div>
             </div>

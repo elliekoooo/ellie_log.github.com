@@ -1,3 +1,5 @@
+import { faHandSparkles } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "react-i18next";
 
 const About = (lang: any) => {
@@ -5,26 +7,22 @@ const About = (lang: any) => {
     const skills:string[] = ["Javascript", "Typescript", "Github", "Angular", "React", "Java", "HTML", "CSS", "Spring Boot"];
 
     return (
-        <div className="hero">
+        <div id="about" className="hero is-fullheight-with-navbar">
             <div className="hero-body has-text-white-bis">
-                <p className="title is-uppercase has-text-weight-bold has-text-white-bis mb-6">About</p>
-                <div className="columns">
-                    <div className="column mx-5">
-                        <p className="subtitle mx-5 is-uppercase has-text-white-bis">Profile Summary</p>
-                        <div className="box test">
-                            { t('about.dec') }
-                        </div>
+                <div className="container">
+                    <p className="is-size-1 is-uppercase has-text-white-bis mb-6">About</p>
+                    <p className="subtitle mx-5 is-uppercase has-text-white-bis">Profile Summary</p>
+                    <div className="box has-text-white is-size-5 my-6">
+                        { t('about.dec') }
                     </div>
-                    <div className="column mx-5">
-                        <p className="subtitle mx-5 is-uppercase has-text-white-bis">My Skills</p>
-                        <div className="box">
-                            <div className="tags are-info"> 
-                            {
-                                skills.map((skill:string, index:number) => (
-                                    <span key={index} className="tag">{ skill }</span>
-                                ))
-                            }
-                            </div>
+                    <p className="subtitle mx-5 is-uppercase has-text-white-bis">My Skills</p>
+                    <div className="box">
+                        <div className="tags"> 
+                        {
+                            skills.map((skill:string, index:number) => (
+                                <span key={index} className="tag is-info is-light is-hoverable is-size-7">{ skill }</span>
+                            ))
+                        }
                         </div>
                     </div>
                 </div>

@@ -9,6 +9,7 @@ const Projects:React.FC = (lang: any) => {
     const fetchData = async() => {
         const res = await Promise.resolve(t('projects',  {returnObjects: true}));
 
+        //FIXME
         if(typeof res == "string")
             return;
         else 
@@ -20,11 +21,13 @@ const Projects:React.FC = (lang: any) => {
     }, [t]);
 
     return (
-        <div className="hero">
+        <div id="projects" className="hero">
             <div className="hero-body">
-                <p className="title is-uppercase has-text-weight-bold mb-6">Projects</p>
-                <p className="subtitle"></p>
-                <ImageSlider size={3} srcs={Object.entries(projects)}/>
+                <p className="title is-uppercase has-text-weight-bold has-text-white mb-6">Projects</p>
+                <p className="subtitle has-text-white">Please </p>
+                <div className="box">
+                    <ImageSlider size={3} srcs={Object.entries(projects)}/>
+                </div>
             </div>
         </div>
     )

@@ -13,11 +13,13 @@ export const Navigator = () => {
     <div>
         {
             page.map((_p, index:number) =>{
-                return (<p 
-                            key={index} 
-                            className={"circle my-3 "+(pageIndex==index ? 'color' : '')}
-                            onClick={changePage}
-                        />);
+                return (
+                    <p 
+                        key={index} 
+                        className={"circle my-3 "+(pageIndex==index ? 'color' : '')}
+                        onClick={changePage}
+                    />
+                )
             })
         }
     </div>
