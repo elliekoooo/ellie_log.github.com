@@ -12,7 +12,7 @@ const About = (lang: any) => {
                 <div className="container">
                     <p className="is-size-1 is-uppercase has-text-white-bis mb-6">About</p>
                     <p className="subtitle mx-5 is-uppercase has-text-white-bis">Profile Summary</p>
-                    <div className="box has-text-white is-size-5 my-6">
+                    <div className="box has-text-grey is-size-5 my-6 px-6 py-6">
                         { t('about.dec') }
                     </div>
                     <p className="subtitle mx-5 is-uppercase has-text-white-bis">My Skills</p>

@@ -35,4 +35,5 @@ const store = configureStore({
 
 export const { change } = langReducer.actions;
 export const { get, set } = pageReducer.actions;
+
 export default store;

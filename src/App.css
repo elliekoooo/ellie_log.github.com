@@ -4,7 +4,7 @@
   background-position: center;
 }
 
-.navbar .navbar-menu, .navbar-brand, .box {
+.navbar .navbar-menu, .navbar-brand {
   background-color: rgb(132, 130, 147) !important;
   box-shadow: none;
 }
@@ -53,11 +53,8 @@ section {
   background-color: rgb(86, 65, 86);
 }
 
-.full-height {
-  height: 100vh;
-}
-
 .center {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,7 +83,4 @@ section {
     transform: translate3d(10px, 10px, 0);
   }
 }
-
-
-
 

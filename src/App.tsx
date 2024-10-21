@@ -5,12 +5,12 @@ import './locales/config';
 import './App.css';
 import 'bulma/css/bulma.min.css';
 import 'bulma-switch/dist/css/bulma-switch.min.css';
-import { ScrollSection } from 'component/ScrollSection';
+import { ScrollSection } from 'component/scroll';
 import About from 'layout/About';
 import Projects from 'layout/Projects';
 import Contact from 'layout/Contact';
 import Header from 'layout/Header';
-import { Navigator } from 'component/Navigator';
+import { Navigator } from 'component/navigator';
 import { useSelector } from 'react-redux';
 import './locales/config';
 import Home from 'layout/Home';
@@ -27,7 +27,7 @@ function App() {
     <div className='background-picture has-navbar-fixed-top'>
       <Header></Header>
       <div className="columns">
-        <div className="column is-11">
+        <div className="column is-12-mobile is-12-tablet is-12-desktop is-11-widescreen is-11-fullhd">
           <ScrollSection refs={sectionRefs}>
               {
                   page.map((p,index) => (
@@ -41,8 +41,8 @@ function App() {
               }
           </ScrollSection>
         </div>
-        <div className='column my-3 is-1'>
-          <div className='full-height center fixed'>
+        <div className='column  my-3 mx-6 is-hidden-touch'>
+          <div className='center fixed'>
             <Navigator></Navigator>
           </div>
         </div>
