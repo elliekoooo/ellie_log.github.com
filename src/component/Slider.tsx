@@ -46,13 +46,14 @@ export const ImageSlider:React.FC<imageInfo> = (
     };
 
     return (
-            <div className="columns mx-5 my-5">
-                <button onClick={goLeft} className="button is-small is-white is-pulled-left" disabled={left==0}>
-                    <FontAwesomeIcon icon={faChevronLeft} />
+        <div>
+            <div className="columns is-vcentered">
+                <button onClick={goLeft} className="button is-text is-small is-white is-pulled-left" disabled={left==0}>
+                    <FontAwesomeIcon icon={faChevronLeft} className="is-size-2 has-text-grey" />
                 </button>
                 { 
                     _srcs?.slice(left, right).map((([key, value]:[string, string])=> (
-                        <div key={key} className={"column"}>
+                        <div key={key} className={"column"}> 
                             <div className="card" onClick={()=>{}}>
                                 <div className="card-image">
                                     <figure className="image is-2by1">
@@ -75,9 +76,10 @@ export const ImageSlider:React.FC<imageInfo> = (
                         </div>
                     )))
                 }
-                <button onClick={goRight} className="button is-small is-white is-pulled-right" disabled={right==_srcs.length}>
-                    <FontAwesomeIcon icon={faChevronRight} />
-                </button>
-            </div>     
+                <button onClick={goRight} className="button is-text is-small is-white is-pulled-right" disabled={right==_srcs.length}>
+                    <FontAwesomeIcon icon={faChevronRight} className="is-size-2 has-text-grey" />
+                </button> 
+            </div>    
+        </div>
     )
 };

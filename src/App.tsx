@@ -24,7 +24,7 @@ function App() {
   const lang = useSelector((state:any)=>state.langReducer);
 
   return (
-    <div className='background-picture has-navbar-fixed-top'>
+    <div className='background has-navbar-fixed-top'>
       <Header></Header>
       <div className="columns">
         <div className="column is-12-mobile is-12-tablet is-12-desktop is-11-widescreen is-11-fullhd">

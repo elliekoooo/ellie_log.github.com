@@ -1,16 +1,18 @@
-.background-picture {
-  background-image: url(./assets/images/bg.jpeg);
-  background-size: cover;
+.background {
   background-position: center;
+  background-image: url('./assets/svgs/wavey-fingerprint.svg');
 }
 
 .navbar .navbar-menu, .navbar-brand {
-  background-color: rgb(132, 130, 147) !important;
+  background-color: rgb(231, 231, 231) !important;
   box-shadow: none;
 }
 
 .link:hover {
-  background-color: rgb(87, 74, 87);
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-decoration-color: purple;
+  padding-top: 1px;
 }
 
 .tag:hover {
@@ -60,6 +62,30 @@ section {
   justify-content: center;
 }
 
+.underline_red {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: rgb(235, 121, 121);
+}
+
+.underline_purple {
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-decoration-color: purple;
+}
+
+.git {
+  color:rgb(170, 121, 235)
+}
+
+.linked {
+  color:rgb(121, 131, 235)
+}
+
+.blog {
+  color:rgb(235, 163, 121)
+}
+
 .icon:hover {
   animation: bouncing 1s none;
 }
@@ -83,4 +109,7 @@ section {
     transform: translate3d(10px, 10px, 0);
   }
 }
+
+
+
 
