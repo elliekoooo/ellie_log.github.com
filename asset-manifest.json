@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d948fb48.css",
-    "main.js": "/portfolio/static/js/main.b8631af0.js",
-    "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
-    "static/media/age-calculator.png": "/portfolio/static/media/age-calculator.600deee2f8d3284870ec.png",
-    "static/media/age-calculator2.png": "/portfolio/static/media/age-calculator2.600deee2f8d3284870ec.png",
-    "static/media/age-calculator3.png": "/portfolio/static/media/age-calculator3.600deee2f8d3284870ec.png",
-    "static/media/age-calculator4.png": "/portfolio/static/media/age-calculator4.600deee2f8d3284870ec.png",
-    "static/media/profile.png": "/portfolio/static/media/profile.655a86ec56129d1573c4.png",
-    "static/media/wavey-fingerprint.svg": "/portfolio/static/media/wavey-fingerprint.55ff5104029c7b26afb9.svg",
-    "index.html": "/portfolio/index.html",
-    "main.d948fb48.css.map": "/portfolio/static/css/main.d948fb48.css.map",
-    "main.b8631af0.js.map": "/portfolio/static/js/main.b8631af0.js.map",
-    "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
+    "main.css": "/static/css/main.0d8e2a4d.css",
+    "main.js": "/static/js/main.284fe00b.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/age-calculator.png": "/static/media/age-calculator.600deee2f8d3284870ec.png",
+    "static/media/age-calculator2.png": "/static/media/age-calculator2.600deee2f8d3284870ec.png",
+    "static/media/age-calculator3.png": "/static/media/age-calculator3.600deee2f8d3284870ec.png",
+    "static/media/age-calculator4.png": "/static/media/age-calculator4.600deee2f8d3284870ec.png",
+    "static/media/profile.png": "/static/media/profile.655a86ec56129d1573c4.png",
+    "static/media/wavey-fingerprint.svg": "/static/media/wavey-fingerprint.55ff5104029c7b26afb9.svg",
+    "index.html": "/index.html",
+    "main.0d8e2a4d.css.map": "/static/css/main.0d8e2a4d.css.map",
+    "main.284fe00b.js.map": "/static/js/main.284fe00b.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d948fb48.css",
-    "static/js/main.b8631af0.js"
+    "static/css/main.0d8e2a4d.css",
+    "static/js/main.284fe00b.js"
   ]
 }
