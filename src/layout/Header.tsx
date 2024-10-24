@@ -52,7 +52,7 @@ const Header:any = () => {
                     </a>
                     <div className="navbar-item">
                         <span className="mx-5 has-text-grey-light has-text-weight-bold is-clickable" onClick={()=>changeLang()}>
-                            <span className={checked ? '' : 'has-text-black is-size-7'}>KO</span> | <span className={checked ? 'has-text-black is-size-7':''}>EN</span>
+                            <span className={checked ? 'is-size-7':'has-text-black'}>KO</span> | <span className={checked ? 'has-text-black':'is-size-7'}>EN</span>
                         </span>   
                     </div>
                 </div>

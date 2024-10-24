@@ -9,7 +9,7 @@ type imageInfo = {
 
 enum col {
     FULLHD=4,
-    DESKTOP=3,
+    DESKTOP=2,
     TABLET=2,
     MOBILE=1
 };
@@ -46,40 +46,38 @@ export const ImageSlider:React.FC<imageInfo> = (
     };
 
     return (
-        <div>
-            <div className="columns is-vcentered">
-                <button onClick={goLeft} className="button is-text is-small is-white is-pulled-left" disabled={left==0}>
-                    <FontAwesomeIcon icon={faChevronLeft} className="is-size-2 has-text-grey" />
-                </button>
-                { 
-                    _srcs?.slice(left, right).map((([key, value]:[string, string])=> (
-                        <div key={key} className={"column"}> 
-                            <div className="card" onClick={()=>{}}>
-                                <div className="card-image">
-                                    <figure className="image is-2by1">
-                                        <img src={require('../assets/images/'+key+'.png')} alt=""/>
-                                    </figure>
-                                </div>
-                                <div className="card-content">
-                                    <div className="content">
-                                        <div key={key}>
-                                            <p className="is-uppercase has-text-weight-bold">{key}</p>
-                                            <p>{value as string}</p>
-                                        </div>
+        <div className="is-flex is-justify-content-center">
+            <button onClick={goLeft} className="button is-text is-white" disabled={left==0}>
+                <FontAwesomeIcon icon={faChevronLeft} className="is-size-2 has-text-grey" />
+            </button>
+            { 
+                _srcs?.slice(left, right).map((([key, value]:[string, string])=> (
+                    <div key={key} className={"mx-2"}> 
+                        <div className="card reponsive-card">
+                            <div className="card-image">
+                                <figure className="image is-2by1">
+                                    <img src={require('../assets/images/'+key+'.png')} alt=""/>
+                                </figure>
+                            </div>
+                            <div className="card-content">
+                                <div className="content">
+                                    <div key={key}>
+                                        <p className="is-uppercase has-text-weight-bold">{key}</p>
+                                        <p>{value as string}</p>
                                     </div>
                                 </div>
-                                <footer className="card-footer is-size-7">
-                                    <a href="#" className="card-footer-item">Github</a>
-                                    <a href="#" className="card-footer-item">Demo</a>
-                                </footer>
                             </div>
+                            <footer className="card-footer is-size-7">
+                                <a href="#" className="card-footer-item">Github</a>
+                                <a href="#" className="card-footer-item">Demo</a>
+                            </footer>
                         </div>
-                    )))
-                }
-                <button onClick={goRight} className="button is-text is-small is-white is-pulled-right" disabled={right==_srcs.length}>
-                    <FontAwesomeIcon icon={faChevronRight} className="is-size-2 has-text-grey" />
-                </button> 
-            </div>    
+                    </div>
+                )))
+            }
+            <button onClick={goRight} className="button is-text is-white" disabled={right==_srcs.length}>
+                <FontAwesomeIcon icon={faChevronRight} className="is-size-2 has-text-grey" />
+            </button> 
         </div>
     )
 };

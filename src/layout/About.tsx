@@ -7,12 +7,8 @@ const About = (lang: any) => {
     return (
         <div id="about" className="hero is-fullheight-with-navbar">
             <div className="hero-body has-text-black">
-                <div className="container">
+                <div className="container is-max-tablet">
                     <p className="is-size-1 is-uppercase has-text-black mb-3">About</p>
-                    <p className="subtitle mx-5 is-uppercase has-text-black is-size-6 underline_purple">Profile Summary</p>
-                    <div className="box has-text-grey is-size-5 px-6 py-6">
-                        { t('about.dec') }
-                    </div>
                     <p className="subtitle mx-5 is-uppercase has-text-black is-size-6 underline_purple">My Skills</p>
                     <div className="box">
                         <div className="tags"> 
@@ -23,6 +19,10 @@ const About = (lang: any) => {
                         }
                         </div>
                     </div>
+                    <p className="subtitle mx-5 is-uppercase has-text-black is-size-6 underline_purple">Profile Summary</p>
+                    <div className="box has-text-grey is-size-5-desktop px-6 py-6">
+                        <div className="scroll" dangerouslySetInnerHTML={{__html:t('about.dec')}}></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,3 +30,4 @@ const About = (lang: any) => {
 };
 
 export default About;
+

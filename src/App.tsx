@@ -24,11 +24,11 @@ function App() {
   const lang = useSelector((state:any)=>state.langReducer);
 
   return (
-    <div className='background has-navbar-fixed-top'>
+    <div className='has-navbar-fixed-top'>
       <Header></Header>
-      <div className="columns">
+      <div className="columns is-gapless is-multiline">
         <div className="column is-12-mobile is-12-tablet is-12-desktop is-11-widescreen is-11-fullhd">
-          <ScrollSection refs={sectionRefs}>
+          {/* <ScrollSection refs={sectionRefs}> */}
               {
                   page.map((p,index) => (
                       <section
@@ -39,9 +39,9 @@ function App() {
                       </section>
                   ))
               }
-          </ScrollSection>
+          {/* </ScrollSection> */}
         </div>
-        <div className='column  my-3 mx-6 is-hidden-touch'>
+        <div className='column my-3 mx-6 is-hidden-touch'>
           <div className='center fixed'>
             <Navigator></Navigator>
           </div>
