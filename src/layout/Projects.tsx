@@ -9,6 +9,9 @@ const Projects:React.FC = (lang: any) => {
     const { t } = useTranslation(lang);
     const [projects, setProjects] = useState([] as any);
 
+    //TODO
+    //PROJECTS 탭으로 만들기
+
     const fetchData = async() => {
         const res = await Promise.resolve(t('projects',  {returnObjects: true}));
 

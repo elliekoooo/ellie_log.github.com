@@ -4,13 +4,12 @@
         "content":"<b>A goal-oriented, collaborative, frontend-focused web developer.</b><br/><br/>I specialize in Angular, React, and TypeScript, with a focus on writing efficient, maintainable code. I enjoy collaborating to find better solutions through continuous communication."
     },
     "about": {
-        "dec":"I am a self-taught software engineer with 4+ years of experience. I developed full-stack web applications, analyzed large volumes of datasets such as climate data and visualized it to deliver clients clearly. also, I collaborated with research team as a project maintainer, got feedback and appled it. I am a self-taught software engineer with 4+ years of experience. I developed full-stack web applications, analyzed large volumes of datasets such as climate data and visualized it to deliver clients clearly. also, I collaborated with research team as a project maintainer, got feedback and appled it."
+        "dec":"<b>Goal-oriented frontend developer specializing in Angular, React, and TypeScript.</b><br/><br/>Committed to clean, maintainable code. Implements responsive designs and optimizes web app performance.<br/>Creates efficient, scalable solutions aligned with project goals. <br/>Thrives in team environments. Leads projects through open communication and collaboration. <br/>Contributes to code reviews, brainstorming, and knowledge sharing. Stays current with frontend technologies. Seeks innovative ways to enhance UX, project quality, and functionality."
     },
     "projects": {
         "age-calculator":"1 this is my first frontend-mentor-project by react, bulma",
         "age-calculator2":"2 this is my first frontend-mentor-project by react, bulma",
         "age-calculator3":"3 this is my first frontend-mentor-project by react, bulma",
         "age-calculator4":"4 this is my first frontend-mentor-project by react, bulma"
-
     }
 }
