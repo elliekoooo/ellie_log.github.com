@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/portfollio/static/css/main.b283bf56.css",
+    "main.js": "/portfollio/static/js/main.280383f3.js",
+    "static/js/453.672b67ba.chunk.js": "/portfollio/static/js/453.672b67ba.chunk.js",
+    "static/media/age-calculator.png": "/portfollio/static/media/age-calculator.600deee2f8d3284870ec.png",
+    "static/media/age-calculator2.png": "/portfollio/static/media/age-calculator2.600deee2f8d3284870ec.png",
+    "static/media/age-calculator3.png": "/portfollio/static/media/age-calculator3.600deee2f8d3284870ec.png",
+    "static/media/age-calculator4.png": "/portfollio/static/media/age-calculator4.600deee2f8d3284870ec.png",
+    "static/media/profile.png": "/portfollio/static/media/profile.655a86ec56129d1573c4.png",
+    "static/media/wavey-fingerprint.svg": "/portfollio/static/media/wavey-fingerprint.55ff5104029c7b26afb9.svg",
+    "index.html": "/portfollio/index.html",
+    "main.b283bf56.css.map": "/portfollio/static/css/main.b283bf56.css.map",
+    "main.280383f3.js.map": "/portfollio/static/js/main.280383f3.js.map",
+    "453.672b67ba.chunk.js.map": "/portfollio/static/js/453.672b67ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b283bf56.css",
+    "static/js/main.280383f3.js"
+  ]
+}
